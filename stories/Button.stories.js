@@ -1,19 +1,33 @@
-import { ButtonPage } from './ButtonPage';
+import { html } from 'lit-html';
+import { setCustomElementsManifest } from '@storybook/web-components';
+import customElements from '../dist/custom-elements/index';
+
+setCustomElementsManifest(customElements);
 
 export default {
   title: 'Button',
   argTypes: {
-    loading: {
-      defaultValue: false,
-      control: { type: 'boolean' },
-    },
     disabled: {
-      defaultValue: false,
       control: { type: 'boolean' },
+      defaultValue: false,
     },
-  },
+    loading: {
+      control: { type: 'boolean' },
+      defaultValue: false,
+    },
+    label: {
+      control: { type: 'text' },
+      defaultValue: 'Test',
+    },
+  }
 };
 
-const Button = (args) => ButtonPage(args);
-
-export const WebComponent = Button.bind({});
+export const WebComponent = (argTypes) => html`
+  <section>
+    <medium-button
+      disabled="${argTypes.disabled}"
+      loading="${argTypes.loading}"
+      label="${argTypes.label}"
+    />
+  </section>
+`;

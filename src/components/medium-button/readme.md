@@ -17,6 +17,7 @@ MediumButton web component
 | ------------ | ---------- | ---------------------- | --------- | ------- |
 | `isDisabled` | `disabled` | Enables disabled state | `boolean` | `false` |
 | `isLoading`  | `loading`  | Enables loading effect | `boolean` | `false` |
+| `label`      | `label`    | Button label           | `string`  | `''`    |
 
 
 ----------------------------------------------

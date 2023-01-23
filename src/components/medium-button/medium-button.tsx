@@ -10,6 +10,11 @@ import { Component, Prop, h, State, Host } from '@stencil/core';
 })
 export class MediumButton {
   /**
+   * Button label
+   */
+  @Prop() label = '';
+
+  /**
    * Enables loading effect
    */
   @Prop({ attribute: 'loading' }) isLoading = false;
@@ -26,9 +31,14 @@ export class MediumButton {
     return (
       <Host class={'Medium-Button'}>
         <button>
-          <slot />
+          { this.isLoading
+            ? <div class="loader" />
+            : ''
+          }
+          <div class={{ 'Medium-Button--invisible': this.isLoading }}> {this.label} </div>
         </button>
       </Host>
     );
   }
 }
+

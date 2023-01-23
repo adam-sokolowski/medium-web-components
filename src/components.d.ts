@@ -19,6 +19,10 @@ export namespace Components {
           * Enables loading effect
          */
         "isLoading": boolean;
+        /**
+          * Button label
+         */
+        "label": string;
     }
 }
 declare global {
@@ -50,6 +54,10 @@ declare namespace LocalJSX {
           * Enables loading effect
          */
         "isLoading"?: boolean;
+        /**
+          * Button label
+         */
+        "label"?: string;
     }
     interface IntrinsicElements {
         "medium-button": MediumButton;
