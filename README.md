@@ -1,5 +1,5 @@
 # lazy-load-content web compontnt
-Allows for contend provided as `slot` to be renrederd lazily
+Allows for content provided as `slot` to be renrederd lazily
 
 
 ## Properties
